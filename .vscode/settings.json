@@ -1,0 +1,17 @@
+{
+  "python.pythonPath": "python3",
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "data/*.json": false
+  },
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "python.envFile": "${workspaceFolder}/.env"
+}

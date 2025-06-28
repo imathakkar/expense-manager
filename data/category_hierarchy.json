@@ -1,0 +1,64 @@
+{
+  "HOME": [
+    "Rent",
+    "Electricity",
+    "Phone",
+    "Wifi",
+    "Maintenance or repairs",
+    "Other"
+  ],
+  "TRANSPORTATION": [
+    "Car Payments",
+    "Auto Insurance",
+    "Fuel",
+    "Public Transporation",
+    "Repairs / Maintenance / Parking",
+    "Other"
+  ],
+  "DAILY LIVING": [
+    "Groceries",
+    "Child Care (Aarav)",
+    "Dining Out",
+    "Clothing",
+    "Salon / Barber",
+    "Other"
+  ],
+  "ENTERTAINMENT": [
+    "Movies",
+    "Sports",
+    "Games",
+    "Subscriptions (Google,  Prime, Apple)",
+    "Other"
+  ],
+  "HEALTH": [
+    "Health Insurance",
+    "UL",
+    "Doctors / Dentist Visits",
+    "Medicine",
+    "Child Plan",
+    "Other"
+  ],
+  "VACATION / HOLIDAY": [
+    "Airfare",
+    "Accommodations",
+    "Food",
+    "Souvenirs",
+    "Other"
+  ],
+  "DONATION": [
+    "Focus",
+    "Dashon",
+    "Other"
+  ],
+  "MISCELLANEOUS": [
+    "Study (IELTS/French/CELPIP)",
+    "Immigration Fees",
+    "WFG Fees",
+    "Other Fees",
+    "India",
+    "Other"
+  ],
+  "Test": [
+    "Test"
+  ]
+}

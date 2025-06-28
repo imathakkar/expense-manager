@@ -1,0 +1,826 @@
+{
+  "2025-06": [
+    {
+      "Date": "2025-06-24",
+      "Month": "2025-06",
+      "Description": "GOOGLE *Google One 650-253-0000, CA 650.00 INR @ .016338",
+      "Amount": 10.62,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-24",
+      "Month": "2025-06",
+      "Description": "YOUR DOLLAR STORE WITH TORONTO, ON",
+      "Amount": 24.01,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #1910 SCARBOROUGH, ON",
+      "Amount": 13.61,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #1910 SCARBOROUGH, ON",
+      "Amount": 3.22,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "COSTCO WHOLESALE W1316 EAST YORK, ON",
+      "Amount": 96.27,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #6591 TORONTO, ON",
+      "Amount": 3.45,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H8B5G9Z89 Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H86DHGBVQ Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-20",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #5363 TORONTO, ON",
+      "Amount": 3.14,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-20",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H81FL92DB Toronto, ON",
+      "Amount": 9.9,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-18",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H7H57LQX8 Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "DOLLARAMA # 447 SCARBOROUGH, ON",
+      "Amount": 9.04,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "ROGERS ******5736 888-764-3771, ON",
+      "Amount": 28.25,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "COSTCO WHOLESALE W1316 EAST YORK, ON",
+      "Amount": 84.43,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "SHIVA?S COFFEE BAR & S SCARBOROUGH, ON",
+      "Amount": 13.54,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "PAYBRIGHT TORONTO, ON",
+      "Amount": 21.34,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "FAMOUS INDIAN SUPERMAR Toronto, ON",
+      "Amount": 52.06,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H7047X89Z Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H71N7DM27 Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-13",
+      "Month": "2025-06",
+      "Description": "NBX*COUNCIL FOR CANADA NORTH YORK, ON",
+      "Amount": 41.0,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-13",
+      "Month": "2025-06",
+      "Description": "SP HANJI GIFTS TORONTO, ON",
+      "Amount": 5.59,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-13",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H6J4JFHXQ Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-06",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H52KD2ZXB Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Klarna*SHEIN 517401184676",
+      "Amount": -29.55,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-20",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE A9XFMBDZ0000 LS RS BROTHERS",
+      "Amount": -53.06,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-19",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL LIFE IN",
+      "Amount": -500.0,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL SAVING",
+      "Amount": -363.6,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE 516518237224 SHIVA?S COFFEE",
+      "Amount": -3.38,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-12",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Questrade 516320863166",
+      "Amount": -10.0,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-10",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Klarna*SHEIN CA 516084358345",
+      "Amount": -29.55,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT TORONTO HYDRO",
+      "Amount": -81.69,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE 515800583144 CHAATTER BOX",
+      "Amount": -16.09,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE 275251759432 SQ *SHAYONA CHA",
+      "Amount": -41.36,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Internet Banking E-TRANSFER 105488284062 Devang Panipuri",
+      "Amount": -15.0,
+      "Category": "Phone",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-05",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Questrade 515616746281",
+      "Amount": -403.51,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-03",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL LIFE IN",
+      "Amount": -200.0,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-02",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL SAVING",
+      "Amount": -363.6,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-02",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE KLARNA* SHEIN 515221844094",
+      "Amount": -0.29,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-24",
+      "Month": "2025-06",
+      "Description": "GOOGLE *Google One 650-253-0000, CA 650.00 INR @ .016338",
+      "Amount": 10.62,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-24",
+      "Month": "2025-06",
+      "Description": "YOUR DOLLAR STORE WITH TORONTO, ON",
+      "Amount": 24.01,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #1910 SCARBOROUGH, ON",
+      "Amount": 13.61,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #1910 SCARBOROUGH, ON",
+      "Amount": 3.22,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "COSTCO WHOLESALE W1316 EAST YORK, ON",
+      "Amount": 96.27,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #6591 TORONTO, ON",
+      "Amount": 3.45,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H8B5G9Z89 Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H86DHGBVQ Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-20",
+      "Month": "2025-06",
+      "Description": "TIM HORTONS #5363 TORONTO, ON",
+      "Amount": 3.14,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-20",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H81FL92DB Toronto, ON",
+      "Amount": 9.9,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-18",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H7H57LQX8 Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "DOLLARAMA # 447 SCARBOROUGH, ON",
+      "Amount": 9.04,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "ROGERS ******5736 888-764-3771, ON",
+      "Amount": 28.25,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "COSTCO WHOLESALE W1316 EAST YORK, ON",
+      "Amount": 84.43,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "SHIVA?S COFFEE BAR & S SCARBOROUGH, ON",
+      "Amount": 13.54,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "PAYBRIGHT TORONTO, ON",
+      "Amount": 21.34,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "FAMOUS INDIAN SUPERMAR Toronto, ON",
+      "Amount": 52.06,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H7047X89Z Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H71N7DM27 Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-13",
+      "Month": "2025-06",
+      "Description": "NBX*COUNCIL FOR CANADA NORTH YORK, ON",
+      "Amount": 41.0,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-13",
+      "Month": "2025-06",
+      "Description": "SP HANJI GIFTS TORONTO, ON",
+      "Amount": 5.59,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-13",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H6J4JFHXQ Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-06",
+      "Month": "2025-06",
+      "Description": "PRESTO FARE/5H52KD2ZXB Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-06-23",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Klarna*SHEIN 517401184676",
+      "Amount": -29.55,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-20",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE A9XFMBDZ0000 LS RS BROTHERS",
+      "Amount": -53.06,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-19",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL LIFE IN",
+      "Amount": -500.0,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL SAVING",
+      "Amount": -363.6,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-16",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE 516518237224 SHIVA?S COFFEE",
+      "Amount": -3.38,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-12",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Questrade 516320863166",
+      "Amount": -10.0,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-10",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Klarna*SHEIN CA 516084358345",
+      "Amount": -29.55,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT TORONTO HYDRO",
+      "Amount": -81.69,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE 515800583144 CHAATTER BOX",
+      "Amount": -16.09,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Interac RETAIL PURCHASE 275251759432 SQ *SHAYONA CHA",
+      "Amount": -41.36,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-09",
+      "Month": "2025-06",
+      "Description": "Internet Banking E-TRANSFER 105488284062 Devang Panipuri",
+      "Amount": -15.0,
+      "Category": "Phone",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-05",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE Questrade 515616746281",
+      "Amount": -403.51,
+      "Category": "Other",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-03",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL LIFE IN",
+      "Amount": -200.0,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-02",
+      "Month": "2025-06",
+      "Description": "Electronic Funds Transfer PREAUTHORIZED DEBIT IND ALL SAVING",
+      "Amount": -363.6,
+      "Category": "Other Fees",
+      "Type": "Debit"
+    },
+    {
+      "Date": "2025-06-02",
+      "Month": "2025-06",
+      "Description": "Point of Sale - Visa Debit VISA DEBIT RETAIL PURCHASE KLARNA* SHEIN 515221844094",
+      "Amount": -0.29,
+      "Category": "Other",
+      "Type": "Debit"
+    }
+  ],
+  "2025-12": [
+    {
+      "Date": "2025-12-06",
+      "Month": "2025-12",
+      "Description": "PRESTO FARE/5H6F5DPCMR Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    }
+  ],
+  "2025-11": [
+    {
+      "Date": "2025-11-06",
+      "Month": "2025-11",
+      "Description": "PRESTO FARE/5H692NZ6DD Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    }
+  ],
+  "2025-09": [
+    {
+      "Date": "2025-09-06",
+      "Month": "2025-09",
+      "Description": "RCSS 1077 TORONTO, ON",
+      "Amount": 10.78,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-09-06",
+      "Month": "2025-09",
+      "Description": "TIM HORTONS #3253 TORONTO, ON",
+      "Amount": 5.49,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-09-06",
+      "Month": "2025-09",
+      "Description": "COSTCO WHOLESALE W1261 WOODBRIDGE, ON",
+      "Amount": 210.39,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-09-06",
+      "Month": "2025-09",
+      "Description": "PRESTO FARE/5H5MB5KQJW Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-09-06",
+      "Month": "2025-09",
+      "Description": "PRESTO FARE/5H5H7DPRVK Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    }
+  ],
+  "2025-05": [
+    {
+      "Date": "2025-05-06",
+      "Month": "2025-05",
+      "Description": "FANCY BURGER TORONTO TORONTO, ON",
+      "Amount": 4.51,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "FANCY BURGER TORONTO TORONTO, ON",
+      "Amount": 4.51,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "PRESTO FARE/5H52G52X6F Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "FAMOUS INDIAN SUPERMAR Toronto, ON",
+      "Amount": 82.45,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "FOCUS CANADA TORONTO, ON",
+      "Amount": 50.0,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "Minerva Tiffins Scarborough, ON",
+      "Amount": 36.11,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "GCMS-NOTES.CA OSHAWA, ON 35.00 USD @ 1.418000",
+      "Amount": 49.63,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "PRESTO FARE/5H4BPBVHV2 Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "TIM HORTONS #6591 TORONTO, ON",
+      "Amount": 5.18,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-05-05",
+      "Month": "2025-05",
+      "Description": "PRESTO FARE/5H477FBNB5 Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    }
+  ],
+  "2025-04": [
+    {
+      "Date": "2025-04-06",
+      "Month": "2025-04",
+      "Description": "PRESTO FARE/5H52G52X6F Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    }
+  ],
+  "2025-03": [
+    {
+      "Date": "2025-03-06",
+      "Month": "2025-03",
+      "Description": "FAMOUS INDIAN SUPERMAR Toronto, ON",
+      "Amount": 82.45,
+      "Category": "Other",
+      "Type": "Credit"
+    }
+  ],
+  "2025-02": [
+    {
+      "Date": "2025-02-06",
+      "Month": "2025-02",
+      "Description": "FOCUS CANADA TORONTO, ON",
+      "Amount": 50.0,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-02-06",
+      "Month": "2025-02",
+      "Description": "Minerva Tiffins Scarborough, ON",
+      "Amount": 36.11,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-02-06",
+      "Month": "2025-02",
+      "Description": "GCMS-NOTES.CA OSHAWA, ON 35.00 USD @ 1.418000",
+      "Amount": 49.63,
+      "Category": "Other",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-02-06",
+      "Month": "2025-02",
+      "Description": "PRESTO FARE/5H4BPBVHV2 Toronto, ON",
+      "Amount": 3.3,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-02-06",
+      "Month": "2025-02",
+      "Description": "TIM HORTONS #6591 TORONTO, ON",
+      "Amount": 5.18,
+      "Category": "Dining Out",
+      "Type": "Credit"
+    },
+    {
+      "Date": "2025-02-06",
+      "Month": "2025-02",
+      "Description": "PRESTO FARE/5H477FBNB5 Toronto, ON",
+      "Amount": 6.6,
+      "Category": "Public Transporation",
+      "Type": "Credit"
+    }
+  ]
+}
