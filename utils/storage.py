@@ -122,7 +122,7 @@ def render_transactions():
                     if selected:
                         indexes_to_drop = [row['_selectedRowNodeInfo']['nodeRowIndex'] for row in selected]
                         debit_df.drop(debit_df.index[indexes_to_drop], inplace=True)
-                        st.experimental_rerun()
+                        st.rerun()
 
             with tabs[1]:
                 updated_credit = show_grid(credit_df, "credit_grid")
@@ -132,7 +132,7 @@ def render_transactions():
                     if selected:
                         indexes_to_drop = [row['_selectedRowNodeInfo']['nodeRowIndex'] for row in selected]
                         credit_df.drop(credit_df.index[indexes_to_drop], inplace=True)
-                        st.experimental_rerun()
+                        st.rerun()
 
             # Combine and save back
             combined_updated = pd.concat([updated_debit, updated_credit], ignore_index=True)

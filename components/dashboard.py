@@ -24,7 +24,7 @@ def render_dashboard():
                         "balances": {}
                     }
                     save_json(DASHBOARD_DATA_FILE, dashboard_data)
-                    st.experimental_rerun()
+                    st.rerun()
     elif selected_month:
         tabs = st.tabs(["Overview", "Income & Balances", "Expense Overview"])
         data = dashboard_data[selected_month]

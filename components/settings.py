@@ -16,7 +16,7 @@ def render_settings():
                 category_structure[parent] = updated
                 save_json(CATEGORY_STRUCTURE_FILE, category_structure)
                 st.success(f"Updated {parent}")
-                st.experimental_rerun()
+                st.rerun()
 
     st.markdown("---")
     if st.button("➕ Add New Parent Category"):

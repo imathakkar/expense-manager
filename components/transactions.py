@@ -1,67 +1,59 @@
 import streamlit as st
 import pandas as pd
+import os
 from datetime import datetime
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
-
 from utils.file_io import load_json, save_json
 from utils.parser import parse_csv
-from utils.storage import (
-    load_all_transactions,
-    update_month_transactions,
-    get_month_transactions,
-    delete_month_transactions,
-)
 from config import CATEGORY_MAP_FILE, CATEGORY_STRUCTURE_FILE
+
+EXPORTS_DIR = "data/exports"
+os.makedirs(EXPORTS_DIR, exist_ok=True)
 
 category_memory = load_json(CATEGORY_MAP_FILE, {})
 category_structure = load_json(CATEGORY_STRUCTURE_FILE, {})
 categories_flat = [sub for subs in category_structure.values() for sub in subs]
 
+def show_grid(data: pd.DataFrame, key: str):
+    data["Delete"] = False  # Add Delete column
+    gb = GridOptionsBuilder.from_dataframe(data)
+    gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=20)
+    gb.configure_default_column(editable=True, filter=True, sortable=True, resizable=True)
+    gb.configure_column(
+        "Category",
+        editable=True,
+        cellEditor="agSelectCellEditor",
+        cellEditorParams={"values": categories_flat},
+        minWidth=180,
+        maxWidth=300,
+        flex=1,
+    )
+    gb.configure_column("Delete", editable=True, headerCheckboxSelection=True)
+    for col in data.columns:
+        if col not in ["Category", "Delete"]:
+            gb.configure_column(col, flex=1, minWidth=120)
+    gb.configure_side_bar()
+
+    grid_response = AgGrid(
+        data,
+        gridOptions=gb.build(),
+        update_mode=GridUpdateMode.VALUE_CHANGED,
+        allow_unsafe_jscode=True,
+        key=key,
+        height=700,
+        fit_columns_on_grid_load=True,
+        theme="material",
+    )
+    return pd.DataFrame(grid_response["data"])
+
 def render_transactions():
     st.title("📁 Upload and Categorize Transactions")
 
-    # Load all stored transactions (dict with keys as "YYYY-MM")
-    all_transactions = load_all_transactions()
-
-    # Extract available months and years from keys like "2025-06"
-    months_years = sorted(all_transactions.keys(), reverse=True)
-    years = sorted({m.split("-")[0] for m in months_years}, reverse=True)
-
-    # Select Year dropdown
-    current_year = str(datetime.now().year)
-    selected_year = st.selectbox("Select Year", options=years if years else [current_year], index=0 if current_year not in years else years.index(current_year))
-
-    # Filter months by selected year
-    months_in_year = [m for m in months_years if m.startswith(selected_year)]
-    month_names_map = {
-        "01": "January", "02": "February", "03": "March", "04": "April",
-        "05": "May", "06": "June", "07": "July", "08": "August",
-        "09": "September", "10": "October", "11": "November", "12": "December"
-    }
-    months_options = [month_names_map.get(m.split("-")[1], m) + f" ({m})" for m in months_in_year]
-
-    # Default month selection: current month if present else first
-    current_month = datetime.now().strftime("%m")
-    default_month_index = 0
-    for idx, m in enumerate(months_in_year):
-        if m.endswith(current_month):
-            default_month_index = idx
-            break
-
-    selected_month_full = st.selectbox("Select Month", options=months_options if months_options else ["No months"], index=default_month_index if months_options else 0)
-    
-    # Extract actual "YYYY-MM" string from selected_month_full which has form "MonthName (YYYY-MM)"
-    selected_month = None
-    if months_options:
-        # selected_month_full is like "June (2025-06)"
-        selected_month = selected_month_full.split("(")[-1].replace(")", "")
-    else:
-        st.info("No transactions saved yet for the selected year.")
-
-    # File uploader - unique key to avoid duplicate id error
     uploaded_files = st.file_uploader(
-        "Upload CSV files (Credit/Debit). Filenames must contain 'credit' or 'debit'.",
-        type=["csv"], accept_multiple_files=True, key="transaction_file_uploader"
+        "Upload CSVs",
+        type=["csv"],
+        accept_multiple_files=True,
+        key="upload_transactions"
     )
 
     if uploaded_files:
@@ -71,85 +63,122 @@ def render_transactions():
             is_credit = "credit" in file.name.lower()
             df = parse_csv(content, is_credit=is_credit, memory=category_memory)
             all_dfs.append(df)
+
         if all_dfs:
             combined_df = pd.concat(all_dfs, ignore_index=True)
-            # Save to current month based on selected_month or today if none
-            save_month = selected_month if selected_month else datetime.now().strftime("%Y-%m")
-            update_month_transactions(all_transactions, save_month, combined_df.to_dict(orient="records"))
-            st.success(f"Saved {len(combined_df)} transactions for {save_month}.")
+            st.session_state["combined_df"] = combined_df
 
-    # Load transactions for selected_month
-    if selected_month and selected_month in all_transactions:
-        df_month = pd.DataFrame(all_transactions[selected_month])
-        if not df_month.empty:
-            # Fix dates if needed
-            if 'Date' in df_month.columns:
-                df_month['Date'] = pd.to_datetime(df_month['Date'], errors='coerce')
+    if "combined_df" in st.session_state and not st.session_state["combined_df"].empty:
+        df = st.session_state["combined_df"]
+        df["Year"] = df["Date"].dt.year.astype(str)
+        df["MonthNum"] = df["Date"].dt.month
 
-            debit_df = df_month[df_month["Type"] == "Debit"].copy()
-            credit_df = df_month[df_month["Type"] == "Credit"].copy()
+        current_year = str(datetime.now().year)
+        current_month_num = datetime.now().month
 
-            tabs = st.tabs(["💳 Debit Transactions", "💰 Credit Transactions"])
+        years = sorted(df["Year"].unique(), reverse=True)
+        default_year_index = years.index(current_year) if current_year in years else 0
 
-            def show_grid(data, label):
-                gb = GridOptionsBuilder.from_dataframe(data)
-                gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=20)
-                gb.configure_default_column(editable=True, filter=True, sortable=True)
-                gb.configure_column(
-                    "Category",
-                    editable=True,
-                    cellEditor="agSelectCellEditor",
-                    cellEditorParams={"values": categories_flat}
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            selected_year = st.selectbox("Select Year", years, index=default_year_index)
+        with col2:
+            months = df[df["Year"] == selected_year]["MonthNum"].unique()
+            months_sorted = sorted(months)
+            month_name_map = {m: datetime(1900, m, 1).strftime('%B') for m in months_sorted}
+            default_month_index = months_sorted.index(current_month_num) if current_month_num in months_sorted else 0
+            selected_month = st.selectbox(
+                "Select Month",
+                options=months_sorted,
+                format_func=lambda x: month_name_map[x],
+                index=default_month_index
+            )
+
+        filtered_df = df[(df["Year"] == selected_year) & (df["MonthNum"] == selected_month)]
+        debit_df = filtered_df[filtered_df["Type"] == "Debit"].copy()
+        credit_df = filtered_df[filtered_df["Type"] == "Credit"].copy()
+
+        hidden_cols = ["Year", "MonthNum", "Type"]
+        debit_df_display = debit_df.drop(columns=hidden_cols, errors="ignore")
+        credit_df_display = credit_df.drop(columns=hidden_cols, errors="ignore")
+
+        tabs = st.tabs(["💳 Debit", "💰 Credit"])
+
+        with tabs[0]:
+            st.markdown("### Debit Transactions")
+            updated_debit = show_grid(debit_df_display, "debit")
+            if st.button("🗑 Delete Selected (Debit)"):
+                to_delete = updated_debit[updated_debit["Delete"] == True]
+                st.session_state["combined_df"] = st.session_state["combined_df"].drop(
+                    st.session_state["combined_df"].index[
+                        st.session_state["combined_df"].apply(
+                            lambda row: any(
+                                (row["Date"] == d["Date"]) and
+                                (row["Amount"] == d["Amount"]) and
+                                (row["Description"] == d["Description"])
+                                for _, d in to_delete.iterrows()
+                            ), axis=1
+                        )
+                    ]
                 )
-                gb.configure_side_bar()
-                grid_response = AgGrid(
-                    data,
-                    gridOptions=gb.build(),
-                    update_mode=GridUpdateMode.VALUE_CHANGED,
-                    allow_unsafe_jscode=True,
-                    key=label,
-                    height=500,
-                    fit_columns_on_grid_load=True
+                st.success(f"Deleted {len(to_delete)} debit transaction(s).")
+                st.rerun()
+
+        with tabs[1]:
+            st.markdown("### Credit Transactions")
+            updated_credit = show_grid(credit_df_display, "credit")
+            if st.button("🗑 Delete Selected (Credit)"):
+                to_delete = updated_credit[updated_credit["Delete"] == True]
+                st.session_state["combined_df"] = st.session_state["combined_df"].drop(
+                    st.session_state["combined_df"].index[
+                        st.session_state["combined_df"].apply(
+                            lambda row: any(
+                                (row["Date"] == d["Date"]) and
+                                (row["Amount"] == d["Amount"]) and
+                                (row["Description"] == d["Description"])
+                                for _, d in to_delete.iterrows()
+                            ), axis=1
+                        )
+                    ]
                 )
-                return pd.DataFrame(grid_response["data"])
+                st.success(f"Deleted {len(to_delete)} credit transaction(s).")
+                st.rerun()
 
-            with tabs[0]:
-                updated_debit = show_grid(debit_df, "debit_grid")
-                # Delete selected rows
-                selected_rows = st.button("Delete Selected Debit Rows")
-                if selected_rows:
-                    selected = AgGrid(debit_df, enable_enterprise_modules=True).get('selected_rows')
-                    if selected:
-                        indexes_to_drop = [row['_selectedRowNodeInfo']['nodeRowIndex'] for row in selected]
-                        debit_df.drop(debit_df.index[indexes_to_drop], inplace=True)
-                        st.experimental_rerun()
+        combined_updated = pd.concat([updated_debit, updated_credit])
+        for _, row in combined_updated.iterrows():
+            mask = (
+                (st.session_state["combined_df"]["Date"] == row["Date"]) &
+                (st.session_state["combined_df"]["Description"] == row["Description"]) &
+                (st.session_state["combined_df"]["Amount"] == row["Amount"])
+            )
+            st.session_state["combined_df"].loc[mask, "Category"] = row["Category"]
 
-            with tabs[1]:
-                updated_credit = show_grid(credit_df, "credit_grid")
-                selected_rows = st.button("Delete Selected Credit Rows")
-                if selected_rows:
-                    selected = AgGrid(credit_df, enable_enterprise_modules=True).get('selected_rows')
-                    if selected:
-                        indexes_to_drop = [row['_selectedRowNodeInfo']['nodeRowIndex'] for row in selected]
-                        credit_df.drop(credit_df.index[indexes_to_drop], inplace=True)
-                        st.experimental_rerun()
+            key = " ".join(row["Description"].lower().split()[:2])
+            category_memory[key] = row["Category"]
 
-            # Combine and save back
-            combined_updated = pd.concat([updated_debit, updated_credit], ignore_index=True)
-            update_month_transactions(all_transactions, selected_month, combined_updated.to_dict(orient="records"))
+        save_json(CATEGORY_MAP_FILE, category_memory)
 
-            # Update category memory
-            for _, row in combined_updated.iterrows():
-                key = " ".join(str(row["Description"]).lower().split()[:2])
-                category_memory[key] = row["Category"]
-            save_json(CATEGORY_MAP_FILE, category_memory)
+        st.markdown("### 💾 Save Transactions")
+        save_filename = f"{selected_year}-{selected_month:02d}_transactions.csv"
+        if st.button("📥 Save to File"):
+            path = os.path.join(EXPORTS_DIR, save_filename)
+            filtered_df.drop(columns=["Year", "MonthNum"], errors="ignore").to_csv(path, index=False)
+            st.success(f"Saved as `{save_filename}` in `data/exports/` folder")
 
-        else:
-            st.info("No transactions available for the selected month.")
+    st.markdown("---")
+    st.markdown("### 📂 Saved Files")
 
-    # Option to delete all transactions for a month
-    if selected_month:
-        if st.button(f"🗑️ Delete all transactions for {selected_month}"):
-            delete_month_transactions(all_transactions, selected_month)
-            st.success(f"Deleted all transactions for {selected_month}.")
-
+    saved_files = sorted([f for f in os.listdir(EXPORTS_DIR) if f.endswith(".csv")])
+    if saved_files:
+        for fname in saved_files:
+            file_path = os.path.join(EXPORTS_DIR, fname)
+            col1, col2, col3 = st.columns([3, 2, 1])
+            col1.write(fname)
+            with open(file_path, "rb") as f:
+                col2.download_button("⬇️ Download", f.read(), file_name=fname, mime="text/csv", key=f"dl_{fname}")
+            if col3.button("🗑️ Delete", key=f"del_{fname}"):
+                os.remove(file_path)
+                st.warning(f"Deleted `{fname}`")
+                st.rerun()
+    else:
+        st.info("No saved export files found.")
